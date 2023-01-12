@@ -1,0 +1,17 @@
+{
+    "test": "Hola",
+    "testCadena" : "Hola soy carlos y este es mi perfil",
+    "goHome": "Ir a home",
+    "Inicio":"Primeros Auxilios",
+    "Llamar": "Llamar 112",
+    "primeroenLlegar1": "PRIMERO EN LLEGAR",
+    "primeroenLlegar2": "Lleva a cabo los siguientes pasos : Comprueba ",
+    "primeroenLlegar3": "Peligro",
+    "primeroenLlegar4": "Responsivo",
+    "primeroenLlegar5": "Grita para pedir ayuda",
+    "primeroenLlegar6": "Vía respiratoria",
+    "primeroenLlegar7": "Respiración",
+    "primeroenLlegar8": "Pulso",
+    "primeroenLlegar9": "Si respira POSICIÓN DE RECUPERACIÓN",
+    "primeroenLlegar10": "Si no respira RCP"
+}
