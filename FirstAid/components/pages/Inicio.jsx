@@ -8,26 +8,7 @@ import {useTranslation} from "react-i18next";
 import { Link, Navigate,useNavigate } from 'react-router-native';
 import { Col, Grid, Row } from 'react-native-easy-grid';
  const Inicio = () => {
-  const mystyleIni = {
-    width: '100%',
-    height:130,
-    backgroundColor: "#32659f",
-    fontFamily: "Rubik",
-    justifyContent: 'center',
-    alignItems: 'center',
-  } 
   
-  const stylesInicio={
-    alignItems: 'center',
-    fontSize: 30,
-    textAlign: 'center', 
-    fontWeight: 'bold',
-    justifyContent: 'center',
-    color: 'white',
-  }
-  const espaciado={
-    margin: 15
-  }
   const {t, i18n} = useTranslation();
 
   const navigate = useNavigate();
@@ -36,25 +17,32 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
   }
   return (
     <View>
+      <View>
       <View style={styles.idiomas} >
         <View style={styles.cajabotones}>
           <TouchableOpacity onPress={()=>i18n.changeLanguage("es")}>
             <Image source={espana} style={styles.icono} />      
           </TouchableOpacity>
           <TouchableOpacity onPress={()=>i18n.changeLanguage("en")}>
-          <Image source={ingles} style={styles.icono} />      
+            <Image source={ingles} style={styles.icono} />      
           </TouchableOpacity>
         </View>
         
       </View>
-      <View style={mystyleIni}>
-        <Image source={ulpgc} alt=""/>
-        <Text style={stylesInicio}>{t("Inicio")}
+      <View style={styles.mystyleIni}>
+        <Image style={{width:150, height:150}} source={ulpgc} alt=""/>
+        <Text style={styles.stylesInicio}>{t("Inicio")}
         </Text>
       </View>
-      <View style={espaciado} >
-          <Button title={t("Llamar")} color="red" onPress={llamar112}/>
       </View>
+      
+      <View style={styles.cuerpoColor}>
+        <View style={styles.espaciado} >
+            <TouchableOpacity style={styles.botonLlamada} onPress={llamar112}>
+                <Text style={styles.letrasLlamada}>{t("Llamar")}</Text>     
+              </TouchableOpacity>
+
+        </View>
 
       <View style={styles.cajabotonesMenu}>
       <Grid>
@@ -98,6 +86,8 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
           
         </Grid>
       </View>
+      </View>
+      
         
       
         
@@ -106,10 +96,54 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
   )
 }
 const styles = StyleSheet.create({
+   mystyleIni: {
+    width: '100%',
+    height:180,
+    backgroundColor: "#32659f",
+    fontFamily: "Rubik",
+    justifyContent: 'center',
+    alignItems: 'center',
+  } ,
+  
+   stylesInicio:{
+    alignItems: 'center',
+    fontSize: 30,
+    marginBottom:10,
+    textAlign: 'center', 
+    fontWeight: 'bold',
+    justifyContent: 'center',
+    color: 'white',
+  },
+   espaciado:{
+    margin: 15,
+    alignItems: 'center',
+
+    justifyContent: 'center',
+
+  },
+  botonLlamada:{
+    elevation: 8,
+      backgroundColor: "red",
+      borderRadius: 10,
+      paddingVertical: 10,
+      paddingHorizontal: 140,
+      marginBottom:5
+  },
+  letrasLlamada:{
+    fontSize: 15,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textTransform: "uppercase"
+  },
+   
     idiomas:{
-      height:'10%',
       backgroundColor: "#32659f",
       display:'flex',
+    },
+    cuerpoColor:{
+      backgroundColor: "#bfbebf",
+      height:600
     },
     letrasBoton:{
       fontSize: 15,
@@ -122,9 +156,9 @@ const styles = StyleSheet.create({
       elevation: 8,
       backgroundColor: "#ffa002",
       borderRadius: 10,
-      paddingVertical: 10,
+      paddingVertical: 5,
       paddingHorizontal: 12,
-      marginBottom:5
+      margin:5
     },
     cajabotonesMenu:{
       alignItems: 'center',
@@ -141,17 +175,18 @@ const styles = StyleSheet.create({
       height:60,
       display:'flex',
       flexDirection: 'row',
-      marginBottom:20
 
 
     },
     icono:{
-      height: 50,
-      width: 50,
+      height: 40,
+      width: 40,
       marginLeft:5,
       resizeMode: 'stretch',
       display:'flex',
-      right:0
+      right:0,
+      marginTop:25,
+
     }
 })
 
