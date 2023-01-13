@@ -1,4 +1,4 @@
-import { View, Text, Image, Pressable , StyleSheet, Button,Linking, TouchableOpacity}  from 'react-native';
+import { View, Text, Image, Pressable , StyleSheet,Platform ,Button,Linking, TouchableOpacity}  from 'react-native';
 import React from 'react'
 import ulpgc from '../img/ulpgc3.png'
 import espana from '../img/espana.png'
@@ -19,7 +19,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
     <View>
       <View>
       <View style={styles.idiomas} >
-        <View style={styles.cajabotones}>
+        <View style={styles.cajabotonesIdioma}>
           <TouchableOpacity onPress={()=>i18n.changeLanguage("es")}>
             <Image source={espana} style={styles.icono} />      
           </TouchableOpacity>
@@ -98,7 +98,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
 const styles = StyleSheet.create({
    mystyleIni: {
     width: '100%',
-    height:180,
+    height: Platform.OS==='ios' ? 190 : 175,
     backgroundColor: "#32659f",
     fontFamily: "Rubik",
     justifyContent: 'center',
@@ -126,11 +126,11 @@ const styles = StyleSheet.create({
       backgroundColor: "red",
       borderRadius: 10,
       paddingVertical: 10,
-      paddingHorizontal: 140,
+      paddingHorizontal: 120,
       marginBottom:5
   },
   letrasLlamada:{
-    fontSize: 15,
+    fontSize: 20,
     color: "#fff",
     fontWeight: "bold",
     alignSelf: "center",
@@ -153,11 +153,18 @@ const styles = StyleSheet.create({
       textTransform: "uppercase"
     },
     botton:{
-      elevation: 8,
       backgroundColor: "#ffa002",
       borderRadius: 10,
       paddingVertical: 5,
       paddingHorizontal: 12,
+      shadowColor: "#000",
+      shadowOffset: {
+	      width: 0,
+	      height: 4,
+      },
+      shadowOpacity: 0.32,
+      shadowRadius: 5.46,
+      elevation: 9,
       margin:5
     },
     cajabotonesMenu:{
@@ -170,9 +177,9 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       marginBottom:20
     },
-    cajabotones:{
+    cajabotonesIdioma:{
       width:60,
-      height:60,
+      height: Platform.OS==='ios' ? 70 : 40,
       display:'flex',
       flexDirection: 'row',
 
@@ -185,7 +192,7 @@ const styles = StyleSheet.create({
       resizeMode: 'stretch',
       display:'flex',
       right:0,
-      marginTop:25,
+      marginTop:Platform.OS==='ios' ? 35 : 1 ,
 
     }
 })
