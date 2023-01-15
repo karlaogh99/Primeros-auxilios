@@ -11,7 +11,7 @@ import {useTranslation} from "react-i18next";
 const PrimeroEnLlegar = () => {
   
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     const press = ()=>{
         navigate("/")
     }
@@ -24,15 +24,20 @@ const PrimeroEnLlegar = () => {
       <View style={{flexDirection:"row"}}>
       <Text>{t("testCadena")} 
       </Text>
-      <Link to="/"><Text> {t("goHome")}</Text></Link>
+      
       </View>
       
-      <Button title="Go Home" onPress={press}/>
       <Button title="EN" onPress={()=>i18n.changeLanguage("en")}/>
       <Button title="ES" onPress={()=>i18n.changeLanguage("es")}/>
     
     </View>
   )
 }
+
+/*
+<Link to="/"><Text> {t("goHome")}</Text></Link>
+      <Button title="Go Home" onPress={press}/>
+
+*/
 
 export default PrimeroEnLlegar

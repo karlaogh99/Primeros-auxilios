@@ -7,11 +7,12 @@ import ingles from '../img/ingles.png'
 import {useTranslation} from "react-i18next";
 import { Link, Navigate,useNavigate } from 'react-router-native';
 import { Col, Grid, Row } from 'react-native-easy-grid';
- const Inicio = () => {
+
+ const Inicio = ({navigation}) => {
   
   const {t, i18n} = useTranslation();
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const llamar112 = async () => {
     await Linking.openURL("tel:+34112");
   }
@@ -48,37 +49,37 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
       <Grid>
           <Col style={styles.cajabotonesCol}>
             <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigate("/primeroenllegar")}>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
                 <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
               </TouchableOpacity>
               
             </Row>
             <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigate("/primeroenllegar")}>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
                 <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
               </TouchableOpacity>
             </Row>
           </Col>
           <Col style={styles.cajabotonesCol}>
             <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigate("/primeroenllegar")}>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
                 <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
               </TouchableOpacity>
             </Row>
             <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigate("/primeroenllegar")}>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
                 <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
               </TouchableOpacity>
             </Row>
           </Col>
           <Col style={styles.cajabotonesCol}>
             <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigate("/primeroenllegar")}>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
                 <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
               </TouchableOpacity>
             </Row>
             <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigate("/primeroenllegar")}>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
                 <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
               </TouchableOpacity>
             </Row>
@@ -98,7 +99,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
 const styles = StyleSheet.create({
    mystyleIni: {
     width: '100%',
-    height: Platform.OS==='ios' ? 190 : 175,
+    height: Platform.OS==='ios' ? 175 : 175,
     backgroundColor: "#32659f",
     fontFamily: "Rubik",
     justifyContent: 'center',
@@ -179,7 +180,7 @@ const styles = StyleSheet.create({
     },
     cajabotonesIdioma:{
       width:60,
-      height: Platform.OS==='ios' ? 70 : 40,
+      height: Platform.OS==='ios' ? 40 : 40,
       display:'flex',
       flexDirection: 'row',
 
@@ -192,7 +193,7 @@ const styles = StyleSheet.create({
       resizeMode: 'stretch',
       display:'flex',
       right:0,
-      marginTop:Platform.OS==='ios' ? 35 : 1 ,
+      marginTop:Platform.OS==='ios' ? 1 : 1 ,
 
     }
 })

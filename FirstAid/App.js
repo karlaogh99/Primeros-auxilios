@@ -4,6 +4,8 @@
  *
  * @format
  */
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import Inicio from './components/pages/Inicio';
 
@@ -14,6 +16,8 @@ import { initReactI18next } from "react-i18next";
 import translationsEn from "./translations/en.json"
 import translationsEs from "./translations/es.json"
 import PrimeroEnLlegar from './components/pages/PrimeroEnLlegar';
+import { Text } from 'react-native';
+import { StackNavigator } from './components/navigator/StackNavigator';
 const App = () => {
   
 
@@ -40,23 +44,32 @@ const App = () => {
     }
   });
   return (
-    <NativeRouter>
-      <Routes>
 
-          <Route path="/" element={<Inicio/>} />
-          
-        
-          <Route  path="/about" element={<About/>} />
-          <Route  path="/primeroenllegar" element={<PrimeroEnLlegar/>} />
+    <NavigationContainer>
+      <StackNavigator/>
+    </NavigationContainer>
 
-      </Routes>
-       
-    </NativeRouter>
-   
   
       
   );
 
 }
-
 export default App;
+
+
+/*
+CODIGO QUE YA NO USO
+<NativeRouter>
+<Routes>
+
+    <Route path="/" element={<Inicio/>} />
+    
+  
+    <Route  path="/about" element={<About/>} />
+    <Route  path="/primeroenllegar" element={<PrimeroEnLlegar/>} />
+
+</Routes>
+ 
+</NativeRouter>
+*/
+
