@@ -16,85 +16,168 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
   const llamar112 = async () => {
     await Linking.openURL("tel:+34112");
   }
-  return (
-    <View>
+  if(i18n.language == "en"){
+    return (
       <View>
-      <View style={styles.idiomas} >
-        <View style={styles.cajabotonesIdioma}>
-          <TouchableOpacity onPress={()=>i18n.changeLanguage("es")}>
-            <Image source={espana} style={styles.icono} />      
-          </TouchableOpacity>
-          <TouchableOpacity onPress={()=>i18n.changeLanguage("en")}>
-            <Image source={ingles} style={styles.icono} />      
-          </TouchableOpacity>
-        </View>
-        
-      </View>
-      <View style={styles.mystyleIni}>
-        <Image style={{width:150, height:150}} source={ulpgc} alt=""/>
-        <Text style={styles.stylesInicio}>{t("Inicio")}
-        </Text>
-      </View>
-      </View>
-      
-      <View style={styles.cuerpoColor}>
-        <View style={styles.espaciado} >
-            <TouchableOpacity style={styles.botonLlamada} onPress={llamar112}>
-                <Text style={styles.letrasLlamada}>{t("Llamar")}</Text>     
-              </TouchableOpacity>
-
-        </View>
-
-      <View style={styles.cajabotonesMenu}>
-      <Grid>
-          <Col style={styles.cajabotonesCol}>
-            <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
-              </TouchableOpacity>
-              
-            </Row>
-            <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
-              </TouchableOpacity>
-            </Row>
-          </Col>
-          <Col style={styles.cajabotonesCol}>
-            <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
-              </TouchableOpacity>
-            </Row>
-            <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
-              </TouchableOpacity>
-            </Row>
-          </Col>
-          <Col style={styles.cajabotonesCol}>
-            <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
-              </TouchableOpacity>
-            </Row>
-            <Row>
-              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
-              </TouchableOpacity>
-            </Row>
-          </Col>
+        <View>
+        <View style={styles.idiomas} >
+          <View style={styles.cajabotonesIdioma}>
+            <TouchableOpacity onPress={()=>i18n.changeLanguage("es")}>
+              <Image source={espana} style={styles.icono} />      
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>i18n.changeLanguage("en")}>
+              <Image source={ingles} style={styles.icono} />      
+            </TouchableOpacity>
+          </View>
           
-        </Grid>
-      </View>
-      </View>
-      
+        </View>
+        <View style={styles.mystyleIni}>
+          <Image style={{width:150, height:150}} source={ulpgc} alt=""/>
+          <Text style={styles.stylesInicio}>{t("Inicio")}
+          </Text>
+        </View>
+        </View>
         
-      
+        <View style={styles.cuerpoColor}>
+          <View style={styles.espaciado} >
+              <TouchableOpacity style={styles.botonLlamada} onPress={llamar112}>
+                  <Text style={styles.letrasLlamada}>{t("Llamar")}</Text>     
+                </TouchableOpacity>
+  
+          </View>
+  
+        <View style={styles.cajabotonesMenu}>
+        <Grid>
+            <Col style={styles.cajabotonesCol}>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+                
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Reaccionalergica')}>
+                  <Text style={styles.letrasBoton}>{t("reaccionalergica1")} </Text>
+                </TouchableOpacity>
+              </Row>
+            </Col>
+            <Col style={styles.cajabotonesCol}>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+            </Col>
+            <Col style={styles.cajabotonesCol}>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+            </Col>
+            
+          </Grid>
+        </View>
+        </View>
         
-      
-    </View>
-  )
+          
+        
+          
+        
+      </View>
+    )
+  }else{
+    return (
+      <View>
+        <View>
+        <View style={styles.idiomas} >
+          <View style={styles.cajabotonesIdioma}>
+            <TouchableOpacity onPress={()=>i18n.changeLanguage("es")}>
+              <Image source={espana} style={styles.icono} />      
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>i18n.changeLanguage("en")}>
+              <Image source={ingles} style={styles.icono} />      
+            </TouchableOpacity>
+          </View>
+          
+        </View>
+        <View style={styles.mystyleIni}>
+          <Image style={{width:150, height:150}} source={ulpgc} alt=""/>
+          <Text style={styles.stylesInicio}>{t("Inicio")}
+          </Text>
+        </View>
+        </View>
+        
+        <View style={styles.cuerpoColor}>
+          <View style={styles.espaciado} >
+              <TouchableOpacity style={styles.botonLlamada} onPress={llamar112}>
+                  <Text style={styles.letrasLlamada}>{t("Llamar")}</Text>     
+                </TouchableOpacity>
+  
+          </View>
+  
+        <View style={styles.cajabotonesMenu}>
+        <Grid>
+            <Col style={styles.cajabotonesCol}>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+                
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Reaccionalergica')}>
+                  <Text style={styles.letrasBoton}>{t("reaccionalergica1")} </Text>
+                </TouchableOpacity>
+              </Row>
+            </Col>
+            <Col style={styles.cajabotonesCol}>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+            </Col>
+            <Col style={styles.cajabotonesCol}>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+            </Col>
+            
+          </Grid>
+        </View>
+        </View>
+        
+          
+        
+          
+        
+      </View>
+    )
+  }
+  
 }
 const styles = StyleSheet.create({
    mystyleIni: {
@@ -154,6 +237,8 @@ const styles = StyleSheet.create({
       textTransform: "uppercase"
     },
     botton:{
+      height: 70,
+      width: 110,
       backgroundColor: "#ffa002",
       borderRadius: 10,
       paddingVertical: 5,
@@ -166,7 +251,6 @@ const styles = StyleSheet.create({
       shadowOpacity: 0.32,
       shadowRadius: 5.46,
       elevation: 9,
-      margin:5
     },
     cajabotonesMenu:{
       alignItems: 'center',
@@ -176,7 +260,7 @@ const styles = StyleSheet.create({
     cajabotonesCol:{
       alignItems: 'center',
       justifyContent: 'center',
-      marginBottom:20
+      marginBottom:1
     },
     cajabotonesIdioma:{
       width:60,

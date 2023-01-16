@@ -1,6 +1,6 @@
 {
     "test": "Hola",
-    "testCadena" : "Hola soy carlos y este es mi perfil",
+    "quehacer" : "QUÉ HACER",
     "goHome": "Ir a home",
     "Inicio":"Primeros Auxilios",
     "Llamar": "Llamar 112",
@@ -13,5 +13,22 @@
     "primeroenLlegar7": "Respiración",
     "primeroenLlegar8": "Pulso",
     "primeroenLlegar9": "Si respira POSICIÓN DE RECUPERACIÓN",
-    "primeroenLlegar10": "Si no respira RCP"
+    "primeroenLlegar10": "Si no respira RCP",
+    "reaccionalergica1": "REACCIÓN ALÉRGICA",
+    "reaccionalergica2": "Señales de alerta:",
+    "reaccionalergica3": "• Historial médico de reacciones alérgicas",
+    "reaccionalergica4": "• Voz ronca o de susurro",
+    "reaccionalergica5": "• Sarpullido",
+    "reaccionalergica6": "• Hinchazón en la cara, labios, ojos o dedos ",
+    "reaccionalergica7": "• Ansiedad",
+    "reaccionalergica8": "• Aumento de la frecuencia cardiaca ",
+    "reaccionalergica9": "• Dificultad respiratoria",
+    "reaccionalergica10": "• Paro cardíaco",
+    "reaccionalergica11": "Para una reacción suave o moderada:",
+    "reaccionalergica12": "1. Tranquiliza a la víctima. La ansiedad puede empeorar los síntomas.",
+    "reaccionalergica13": "2. Trata de identificar el alérgeno y evita que la persona siga en contacto con él.",
+    "reaccionalergica14": "3. Si la persona desarrolla un sarpullido con picor, aplícale compresas frías y una crema con hidrocortisona disponible sin receta. ",
+    "reaccionalergica15": "4. Observa si aumentan los signos de ansiedad.",
+    "reaccionalergica16": "5. Busca ayuda médica. Para una reacción leve, un sanitario puede recomendar medicinas de venta libre, como un antihistamínico."
+
 }

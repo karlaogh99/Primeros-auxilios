@@ -1,5 +1,6 @@
 {
     "test": "Hello",
+    "quehacer" : "WHAT TO DO:",
     "Inicio":"First Aid",
     "Llamar": "Call 112",
     "primeroenLlegar1": "FIRST ON THE SCENE",
@@ -11,6 +12,16 @@
     "primeroenLlegar7": "Breathing",
     "primeroenLlegar8": "Circulation",
     "primeroenLlegar9": "Breathing normally RECOVERY POSITION",
-    "primeroenLlegar10": "Not breathing normally CPR"
+    "primeroenLlegar10": "Not breathing normally CPR",
+    "reaccionalergica1": "ALLERGIC REACTION",
+    "reaccionalergica2": "Warning signs: ",
+    "reaccionalergica3": "• Previous history of allergic reactions",
+    "reaccionalergica4": "• Hoarse voice  or whispering ",
+    "reaccionalergica5": "• Rash",
+    "reaccionalergica6": "• Swelling around face, lips, eyes and fingers ",
+    "reaccionalergica7": "• Anxiety ",
+    "reaccionalergica8": "• Fast pulse rate",
+    "reaccionalergica9": "• Difficulty breathing",
+    "reaccionalergica10": "• Cardiac arrest"
 
 }
