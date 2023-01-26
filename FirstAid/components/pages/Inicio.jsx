@@ -45,13 +45,13 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
                 </TouchableOpacity>
   
           </View>
-  
+          
         <View style={styles.cajabotonesMenu}>
         <Grid>
             <Col style={styles.cajabotonesCol}>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Atragantamiento')}>
+                  <Text style={styles.letrasBoton}>{t("Atragantamiento1")} </Text>
                 </TouchableOpacity>
                 
               </Row>
@@ -60,28 +60,73 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
                   <Text style={styles.letrasBoton}>{t("reaccionalergica1")} </Text>
                 </TouchableOpacity>
               </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desmayo')}>
+                  <Text style={styles.letrasBoton}>{t("Desmayo1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Llamada')}>
+                  <Text style={styles.letrasBoton}>{t("Llamada1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Recuperacion')}>
+                  <Text style={styles.letrasBoton}>{t("Recuperacion1")} </Text>
+                </TouchableOpacity>
+              </Row>
             </Col>
             <Col style={styles.cajabotonesCol}>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Asma')}>
+                  <Text style={styles.letrasBoton}>{t("Asma1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Hemorragia')}>
+                  <Text style={styles.letrasBoton}>{t("Hemorragia1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('AtaqueCorazon')}>
+                  <Text style={styles.letrasBoton}>{t("AtaqueCorazon1")} </Text>
                 </TouchableOpacity>
               </Row>
               <Row>
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
                   <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desfibrilador')}>
+                  <Text style={styles.letrasBoton}>{t("Desfibrilador1")} </Text>
                 </TouchableOpacity>
               </Row>
             </Col>
             <Col style={styles.cajabotonesCol}>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Quemaduras')}>
+                  <Text style={styles.letrasBoton}>{t("Quemaduras1")} </Text>
                 </TouchableOpacity>
               </Row>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Epilepsia')}>
+                  <Text style={styles.letrasBoton}>{t("Epilepsia1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Shock')}>
+                  <Text style={styles.letrasBoton}>{t("Shock1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Rcp')}>
+                  <Text style={styles.letrasBoton}>{t("Rcp1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Ictus')}>
+                  <Text style={styles.letrasBoton}>{t("Ictus1")} </Text>
                 </TouchableOpacity>
               </Row>
             </Col>
@@ -89,10 +134,6 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
           </Grid>
         </View>
         </View>
-        
-          
-        
-          
         
       </View>
     )
@@ -125,13 +166,13 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
                 </TouchableOpacity>
   
           </View>
-  
+          
         <View style={styles.cajabotonesMenu}>
         <Grid>
             <Col style={styles.cajabotonesCol}>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Atragantamiento')}>
+                  <Text style={styles.letrasBoton}>ATRAGANTA-MIENTO </Text>
                 </TouchableOpacity>
                 
               </Row>
@@ -140,28 +181,73 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
                   <Text style={styles.letrasBoton}>{t("reaccionalergica1")} </Text>
                 </TouchableOpacity>
               </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desmayo')}>
+                  <Text style={styles.letrasBoton}>{t("Desmayo1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Llamada')}>
+                  <Text style={styles.letrasBoton}>{t("Llamada1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Recuperacion')}>
+                  <Text style={styles.letrasBotonPeque}>{t("Recuperacion1")} </Text>
+                </TouchableOpacity>
+              </Row>
             </Col>
             <Col style={styles.cajabotonesCol}>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Asma')}>
+                  <Text style={styles.letrasBoton}>{t("Asma1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Hemorragia')}>
+                  <Text style={styles.letrasBoton}>{t("Hemorragia1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('AtaqueCorazon')}>
+                  <Text style={styles.letrasBoton}>{t("AtaqueCorazon1")} </Text>
                 </TouchableOpacity>
               </Row>
               <Row>
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
                   <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desfibrilador')}>
+                  <Text style={styles.letrasBotonPeque}>{t("Desfibrilador1")} </Text>
                 </TouchableOpacity>
               </Row>
             </Col>
             <Col style={styles.cajabotonesCol}>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Quemaduras')}>
+                  <Text style={styles.letrasBoton}>{t("Quemaduras1")} </Text>
                 </TouchableOpacity>
               </Row>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Epilepsia')}>
+                  <Text style={styles.letrasBoton}>{t("Epilepsia1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Shock')}>
+                  <Text style={styles.letrasBoton}>{t("Shock1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Rcp')}>
+                  <Text style={styles.letrasBoton}>{t("Rcp1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Ictus')}>
+                  <Text style={styles.letrasBoton}>Ictus </Text>
                 </TouchableOpacity>
               </Row>
             </Col>
@@ -169,10 +255,6 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
           </Grid>
         </View>
         </View>
-        
-          
-        
-          
         
       </View>
     )
@@ -199,7 +281,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
    espaciado:{
-    margin: 15,
+    margin: 10,
     alignItems: 'center',
 
     justifyContent: 'center',
@@ -211,10 +293,38 @@ const styles = StyleSheet.create({
       borderRadius: 10,
       paddingVertical: 10,
       paddingHorizontal: 120,
-      marginBottom:5
+      marginBottom:1
+  },
+  botonsolo:{
+      borderRadius: 10,
+      justifyContent:'center',
+      marginBottom:6,
+      alignItems:'center'
+  },
+  bottonsolo:{
+      height: 60,
+      width: 170,
+      backgroundColor: "#ffa002",
+      borderRadius: 10,
+      shadowColor: "#000",
+      shadowOffset: {
+	      width: 0,
+	      height: 4,
+      },
+      shadowOpacity: 0.32,
+      shadowRadius: 5.46,
+      justifyContent: 'center',
+      alignItems: 'center',
   },
   letrasLlamada:{
     fontSize: 20,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textTransform: "uppercase"
+  },
+  letrasBotonPeque:{
+    fontSize: 14,
     color: "#fff",
     fontWeight: "bold",
     alignSelf: "center",
@@ -238,11 +348,11 @@ const styles = StyleSheet.create({
     },
     botton:{
       height: 70,
-      width: 110,
-      backgroundColor: "#ffa002",
+      width: 125, 
+      backgroundColor: "#FFCC2B",
       borderRadius: 10,
       paddingVertical: 5,
-      paddingHorizontal: 12,
+      paddingHorizontal: 3,
       shadowColor: "#000",
       shadowOffset: {
 	      width: 0,
@@ -251,10 +361,13 @@ const styles = StyleSheet.create({
       shadowOpacity: 0.32,
       shadowRadius: 5.46,
       elevation: 9,
+      justifyContent: 'center',
+      alignItems: 'center',
+
     },
     cajabotonesMenu:{
       alignItems: 'center',
-      height:150,
+      height:380,
       justifyContent: 'center',
     },
     cajabotonesCol:{
@@ -287,4 +400,10 @@ const styles = StyleSheet.create({
   //      <Link to ="/about">
     //      <Text>Test</Text>
       //  </Link>
+//      <View style={styles.botonsolo}>
+  //        <TouchableOpacity style={styles.bottonsolo} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+    //          <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+      //      </TouchableOpacity>
+        //  </View>
+            
 export default Inicio

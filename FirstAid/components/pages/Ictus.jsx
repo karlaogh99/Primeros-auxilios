@@ -1,104 +1,99 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
 import {useTranslation} from "react-i18next";
-import { Col, Grid, Row } from 'react-native-easy-grid';
-const ReaccionAlergica = ({navigation}) => {
-    const [textToRender, setTextToRender] = useState("")
 
+const Ictus = ({navigation}) => {
+  
     const {t, i18n} = useTranslation();
-    const handlePressWhat = ()=>{
-        setTextToRender(<Text>
+//#ffa103 color naranja
+    if(i18n.language == "es"){
 
-        </Text> )}
-  return (
+    }
+return (
     <View style={styles.principal}>
       <ScrollView style={styles.central}>
-        <View style={styles.cajaTitulos}>
+
+      <View style={styles.cajaTitulos}>
         <Text style={styles.letrasTitulos}>
-          {t("reaccionalergica2")} 
+        {t("Ictus1")} 
         </Text>
-        </View>
+        <Text style={styles.letrasTitulos}>
+          {t("Ictus2")} 
+        </Text>
+       </View>
         <Text style={styles.letras1}>
-          {t("reaccionalergica3")}
+          {t("Ictus3")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica4")}
+          {t("Ictus4")}
         </Text >
         <Text style={styles.letras1}>
-          {t("reaccionalergica5")}
+          {t("Ictus5")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica6")}
+          {t("Ictus6")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica7")}
+          {t("Ictus7")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica8")}
+          {t("Ictus8")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica9")}
+          {t("Ictus9")}
+        </Text>
+        <View style={styles.cajaSecundarios}>
+        <Text style={styles.letrasTitulos}>
+          {t("Ictus10")} 
+        </Text>
+        </View>
+        <Text style={styles.letras1}>
+          {t("Ictus11")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica10")}
+          {t("Ictus12")}
+        </Text>
+        <Text style={styles.letras1}>
+          {t("Ictus13")}
+        </Text>
+        <Text style={styles.letras1}>
+          {t("Ictus14")}
+        </Text>
+        <Text style={styles.letras1}>
+          {t("Ictus15")}
         </Text>
         <View style={styles.cajaTitulos}>
-          <Text style={styles.letrasTitulos}>{t("quehacer")}</Text>
-        </View>
-        <View style={styles.cajaSecundarios}>
-        <Text style={styles.letrasTitulos2}>
-          {t("reaccionalergica11")}
+        <Text style={styles.letrasTitulos}>
+          {t("quehacer")} 
+        </Text>
+       </View>
+       <View style={styles.cajaSecundarios}>
+        <Text style={styles.letrasTitulos}>
+          {t("Ictus16")} 
         </Text>
         </View>
-        
         <Text style={styles.letras1}>
-          {t("reaccionalergica12")}
+          {t("Ictus17")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica13")}
+          {t("Ictus18")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica14")}
+          {t("Ictus19")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica15")}
+          {t("Ictus20")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica16")}
-        </Text>
-        <View style={styles.cajaSecundarios}>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica17")}
-        </Text>
-        </View>
-        
-        <Text style={styles.letras1}>
-          {t("reaccionalergica18")} 
-        </Text>
-        <TouchableOpacity onPress={()=>navigation.navigate('PrimeroLlegar')} style={{backgroundColor:'white', height:20, width:'80%',marginBottom:15, alignItems:'center', justifyContent:'center'}}><Text style={{fontSize:20}}> {t("primeroenLlegar1")}.</Text></TouchableOpacity>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica19")}
+          {t("Ictus21")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica20")}
-        </Text> 
-        <Text style={styles.letras1}>
-          {t("reaccionalergica21")}
+          {t("Ictus22")}
         </Text>
-        <View style={styles.cajaSecundarios}>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica22")}
-        </Text>
-        </View>
-        
-        <Text style={styles.letras1}>
-          {t("reaccionalergica23")}
-        </Text>
-
         
       </ScrollView>
     </View>
@@ -115,7 +110,7 @@ const styles = StyleSheet.create({
   },
   cajaTitulos:{
     width:'100%',
-    height:40,
+    height:70,
     alignItems: 'center',
     justifyContent: 'center',
     
@@ -161,5 +156,4 @@ const styles = StyleSheet.create({
 
 
 
-
-export default ReaccionAlergica
+export default Ictus

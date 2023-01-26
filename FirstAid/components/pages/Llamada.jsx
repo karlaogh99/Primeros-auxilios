@@ -8,13 +8,8 @@ import {useTranslation} from "react-i18next";
 
 
 
-const PrimeroEnLlegar = ({navigation}) => {
+const Llamada = ({navigation}) => {
   
-
-    //const navigate = useNavigate();
-    const press = ()=>{
-        navigate("/")
-    }
     const {t, i18n} = useTranslation();
 //#ffa103 color naranja
     
@@ -22,34 +17,31 @@ const PrimeroEnLlegar = ({navigation}) => {
     <View style={styles.principal}>
       <View style={styles.central}>
         <Text style={styles.letras1}>
-          {t("primeroenLlegar2")} 
+          {t("Llamada2")} 
         </Text>
         <View style={styles.cajaTitulos}>
           <Text style={styles.letras1}>
-            {t("primeroenLlegar3")}
+            {t("Llamada3")}
           </Text>
           <Text style={styles.letras1}>
-            {t("primeroenLlegar4")}
+            {t("Llamada4")}
           </Text >
           <Text style={styles.letras1}>
-            {t("primeroenLlegar5")}
+            {t("Llamada5")}
           </Text>
           <Text style={styles.letras1}>
-            {t("primeroenLlegar6")}
+            {t("Llamada6")}
           </Text>
           <Text style={styles.letras1}>
-            {t("primeroenLlegar7")}
+            {t("Llamada7")}
           </Text>
           <Text style={styles.letras1}>
-            {t("primeroenLlegar8")}
+            {t("Llamada8")}
          </Text>
         </View>
         
         <Text style={styles.letras1}>
-          {t("primeroenLlegar9")}
-        </Text>
-        <Text style={styles.letras1}>
-          {t("primeroenLlegar10")}
+          {t("llamar")}
         </Text>
       </View>
       
@@ -66,10 +58,7 @@ const styles = StyleSheet.create({
   },
   cajaTitulos:{
     width:'100%',
-    height:250,
-    alignItems: 'center',
-    justifyContent: 'center',
-    
+    height:420,    
     backgroundColor:'#AED6F1',
     borderRadius: 10,
   },
@@ -82,18 +71,19 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   letrasTitulos:{
-    fontSize:30,
+    fontSize:50,
     color:'#1B2631' ,
 
   },
   letrasTitulos2:{
-    fontSize:30,
+    fontSize:50,
     color:'#1B2631' ,
 
   },
   central:{
     margin:15,
     width:'90%',
+    height:200,
     backgroundColor:'#FEFDEA',
     borderRadius: 10,
 
@@ -101,28 +91,10 @@ const styles = StyleSheet.create({
   letras1:{
     color:'#1B2631' ,
     fontSize:24, 
-    marginBottom:7
+    margin:7
   },
 
 
 })
 
-
-/*
-<Link to="/"><Text> {t("goHome")}</Text></Link>
-      <Button title="Go Home" onPress={press}/>
-
-
-
-      <View style={{flexDirection:"row"}}>
-      <Text>{t("testCadena")} 
-      </Text>
-      
-      </View>
-      
-      <Button title="EN" onPress={()=>i18n.changeLanguage("en")}/>
-      <Button title="ES" onPress={()=>i18n.changeLanguage("es")}/>
-    
-*/
-
-export default PrimeroEnLlegar
+export default Llamada

@@ -1,104 +1,88 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
 import {useTranslation} from "react-i18next";
-import { Col, Grid, Row } from 'react-native-easy-grid';
-const ReaccionAlergica = ({navigation}) => {
-    const [textToRender, setTextToRender] = useState("")
 
+const Hemorragia = ({navigation}) => {
+  
     const {t, i18n} = useTranslation();
-    const handlePressWhat = ()=>{
-        setTextToRender(<Text>
-
-        </Text> )}
-  return (
+//#ffa103 color naranja
+    
+return (
     <View style={styles.principal}>
       <ScrollView style={styles.central}>
+      <View style={styles.cajaSecundarios}>
+        <Text style={styles.letrasTitulos}>
+          {t("Hemorragia2")} 
+        </Text>
+        </View>
         <View style={styles.cajaTitulos}>
         <Text style={styles.letrasTitulos}>
-          {t("reaccionalergica2")} 
+          {t("quehacer")} 
         </Text>
         </View>
         <Text style={styles.letras1}>
-          {t("reaccionalergica3")}
+          {t("Hemorragia3")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica4")}
+          {t("Hemorragia4")}
         </Text >
         <Text style={styles.letras1}>
-          {t("reaccionalergica5")}
+          {t("Hemorragia5")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica6")}
+          {t("Hemorragia6")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica7")}
+          {t("Hemorragia7")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica8")}
+          {t("Hemorragia8")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica9")}
+          {t("Hemorragia9")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica10")}
-        </Text>
-        <View style={styles.cajaTitulos}>
-          <Text style={styles.letrasTitulos}>{t("quehacer")}</Text>
-        </View>
-        <View style={styles.cajaSecundarios}>
-        <Text style={styles.letrasTitulos2}>
-          {t("reaccionalergica11")}
-        </Text>
-        </View>
-        
-        <Text style={styles.letras1}>
-          {t("reaccionalergica12")}
+          {t("Hemorragia10")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica13")}
+          {t("Hemorragia11")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica14")}
+          {t("Hemorragia12")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica15")}
+          {t("Hemorragia13")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica16")}
-        </Text>
-        <View style={styles.cajaSecundarios}>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica17")}
-        </Text>
-        </View>
-        
-        <Text style={styles.letras1}>
-          {t("reaccionalergica18")} 
-        </Text>
-        <TouchableOpacity onPress={()=>navigation.navigate('PrimeroLlegar')} style={{backgroundColor:'white', height:20, width:'80%',marginBottom:15, alignItems:'center', justifyContent:'center'}}><Text style={{fontSize:20}}> {t("primeroenLlegar1")}.</Text></TouchableOpacity>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica19")}
-        </Text>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica20")}
-        </Text> 
-        <Text style={styles.letras1}>
-          {t("reaccionalergica21")}
-        </Text>
-        <View style={styles.cajaSecundarios}>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica22")}
-        </Text>
-        </View>
-        
-        <Text style={styles.letras1}>
-          {t("reaccionalergica23")}
+          {t("Hemorragia14")}
         </Text>
 
+
+        <View style={styles.cajaSecundarios}>
+          <Text style={styles.letrasTitulos}>{t("Hemorragia15")}</Text>
+        </View>
+        <Text style={styles.letras1}>
+          {t("Hemorragia16")}
+        </Text>
+        <Text style={styles.letras1}>
+          {t("Hemorragia17")}
+        </Text>
+        <Text style={styles.letras1}>
+          {t("Hemorragia18")}
+        </Text>
+        <Text style={styles.letras1}>
+          {t("Hemorragia19")}
+        </Text>
+        <Text style={styles.letras1}>
+          {t("Hemorragia20")}
+        </Text>
+        <Text style={styles.letras1}>
+          {t("Hemorragia21")}
+        </Text>
         
       </ScrollView>
     </View>
@@ -161,5 +145,4 @@ const styles = StyleSheet.create({
 
 
 
-
-export default ReaccionAlergica
+export default Hemorragia

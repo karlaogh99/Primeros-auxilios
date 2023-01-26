@@ -6,100 +6,77 @@ import { Link, Navigate,useNavigate } from 'react-router-native';
 
 import {useTranslation} from "react-i18next";
 import { Col, Grid, Row } from 'react-native-easy-grid';
-const ReaccionAlergica = ({navigation}) => {
+const AtaqueCorazon = ({navigation}) => {
     const [textToRender, setTextToRender] = useState("")
 
     const {t, i18n} = useTranslation();
-    const handlePressWhat = ()=>{
-        setTextToRender(<Text>
-
-        </Text> )}
+    
   return (
     <View style={styles.principal}>
       <ScrollView style={styles.central}>
         <View style={styles.cajaTitulos}>
         <Text style={styles.letrasTitulos}>
-          {t("reaccionalergica2")} 
+          {t("sintamosyseñales")} 
         </Text>
         </View>
         <Text style={styles.letras1}>
-          {t("reaccionalergica3")}
+          {t("AtaqueCorazon2")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica4")}
+          {t("AtaqueCorazon3")}
         </Text >
         <Text style={styles.letras1}>
-          {t("reaccionalergica5")}
+          {t("AtaqueCorazon4")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica6")}
+          {t("AtaqueCorazon5")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica7")}
+          {t("AtaqueCorazon6")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica8")}
-        </Text>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica9")}
-        </Text>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica10")}
+          {t("AtaqueCorazon7")}
         </Text>
         <View style={styles.cajaTitulos}>
           <Text style={styles.letrasTitulos}>{t("quehacer")}</Text>
         </View>
-        <View style={styles.cajaSecundarios}>
-        <Text style={styles.letrasTitulos2}>
-          {t("reaccionalergica11")}
-        </Text>
-        </View>
         
         <Text style={styles.letras1}>
-          {t("reaccionalergica12")}
+          {t("AtaqueCorazon8")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica13")}
+          {t("AtaqueCorazon9")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica14")}
+          {t("AtaqueCorazon10")}
         </Text>
         <Text style={styles.letras1}>
-          {t("reaccionalergica15")}
-        </Text>
+          {t("AtaqueCorazon11")}
+        </Text>        
         <Text style={styles.letras1}>
-          {t("reaccionalergica16")}
-        </Text>
-        <View style={styles.cajaSecundarios}>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica17")}
-        </Text>
-        </View>
-        
-        <Text style={styles.letras1}>
-          {t("reaccionalergica18")} 
-        </Text>
-        <TouchableOpacity onPress={()=>navigation.navigate('PrimeroLlegar')} style={{backgroundColor:'white', height:20, width:'80%',marginBottom:15, alignItems:'center', justifyContent:'center'}}><Text style={{fontSize:20}}> {t("primeroenLlegar1")}.</Text></TouchableOpacity>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica19")}
-        </Text>
-        <Text style={styles.letras1}>
-          {t("reaccionalergica20")}
+          {t("AtaqueCorazon12")}
         </Text> 
         <Text style={styles.letras1}>
-          {t("reaccionalergica21")}
-        </Text>
-        <View style={styles.cajaSecundarios}>
+          {t("AtaqueCorazon13")}
+        </Text> 
         <Text style={styles.letras1}>
-          {t("reaccionalergica22")}
-        </Text>
-        </View>
-        
+          {t("AtaqueCorazon14")}
+        </Text> 
         <Text style={styles.letras1}>
-          {t("reaccionalergica23")}
-        </Text>
-
-        
+          {t("AtaqueCorazon15")}
+        </Text> 
+        <Text style={styles.letras1}>
+          {t("AtaqueCorazon16")}
+        </Text> 
+        <Text style={styles.letras1}>
+          {t("AtaqueCorazon17")}
+        </Text> 
+        <Text style={styles.letras1}>
+          {t("AtaqueCorazon18")}
+        </Text> 
+        <Text style={styles.letras1}>
+          {t("AtaqueCorazon19")}
+        </Text> 
       </ScrollView>
     </View>
   )
@@ -160,6 +137,4 @@ const styles = StyleSheet.create({
 })
 
 
-
-
-export default ReaccionAlergica
+export default AtaqueCorazon
