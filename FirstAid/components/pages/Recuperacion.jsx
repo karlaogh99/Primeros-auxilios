@@ -1,6 +1,10 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView,Image } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
+import reco0 from '../img/HEALTH_Recovery0.png'
+import reco1 from '../img/HEALTH_Recovery1.png'
+import reco2 from '../img/HEALTH_Recovery2.png'
+import reco3 from '../img/HEALTH_Recovery3.png'
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
@@ -20,18 +24,27 @@ const Recuperacion = ({navigation}) => {
         <Text style={styles.letras1}>
           {t("Recuperacion3")}
         </Text>
+
         <Text style={styles.letras1}>
           {t("Recuperacion4")}
         </Text >
+        <Image source={reco0} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Recuperacion5")}
         </Text>
+        <Image source={reco1} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Recuperacion6")}
         </Text>
+        <Image source={reco2} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Recuperacion7")}
         </Text>
+        <Image source={reco3} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Recuperacion8")}
         </Text>
@@ -59,6 +72,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
 
+  },
+  imagen:{
+    height:200,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode: 'contain'  
   },
   cajaTitulos:{
     width:'100%',

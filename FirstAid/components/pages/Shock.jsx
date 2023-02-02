@@ -1,9 +1,10 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView,Image } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
-
+import shock0 from '../img/HEALTH_Shock0.png'
+import shock1 from '../img/HEALTH_Shock1.png'
 import {useTranslation} from "react-i18next";
 import { Col, Grid, Row } from 'react-native-easy-grid';
 const Shock = ({navigation}) => {
@@ -62,6 +63,8 @@ const Shock = ({navigation}) => {
         <Text style={styles.letras1}>
           {t("Shock14")}
         </Text>
+        <Image source={shock0} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Shock15")}
         </Text>
@@ -71,6 +74,8 @@ const Shock = ({navigation}) => {
         <Text style={styles.letras1}>
           {t("Shock17")}
         </Text>        
+        <Image source={shock1} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Shock18")}
         </Text> 
@@ -132,6 +137,13 @@ const styles = StyleSheet.create({
     color:'#1B2631' ,
     fontSize:24, 
     marginBottom:7
+  },
+  imagen:{
+    height:250,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode: 'contain'  
   },
   botones:{
 

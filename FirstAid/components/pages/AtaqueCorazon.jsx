@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Image } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
+import ataque from '../img/HEALTH_Heart_attack.png'
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
@@ -53,14 +54,13 @@ const AtaqueCorazon = ({navigation}) => {
         <Text style={styles.letras1}>
           {t("AtaqueCorazon11")}
         </Text>        
+        <Image source={ataque} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("AtaqueCorazon12")}
         </Text> 
         <Text style={styles.letras1}>
           {t("AtaqueCorazon13")}
-        </Text> 
-        <Text style={styles.letras1}>
-          {t("AtaqueCorazon14")}
         </Text> 
         <Text style={styles.letras1}>
           {t("AtaqueCorazon15")}
@@ -89,6 +89,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
 
+  },
+  imagen:{
+    height:250,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode: 'contain'  
   },
   cajaTitulos:{
     width:'100%',

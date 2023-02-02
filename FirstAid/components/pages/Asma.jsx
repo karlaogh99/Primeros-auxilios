@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Image } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
+import asma from '../img/HEALTH_Asthma.png'
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
@@ -46,7 +47,7 @@ const Asma = ({navigation}) => {
         <View style={styles.cajaTitulos}>
           <Text style={styles.letrasTitulos}>{t("quehacer")}</Text>
         </View>
-        
+        <Image source={asma} style={styles.imagen} />    
         <Text style={styles.letras1}>
           {t("Asma10")}
         </Text>
@@ -91,8 +92,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#FEFDEA",
     alignItems: 'center',
     justifyContent: 'center',
-
-
+  },
+  imagen:{
+    height:290,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   cajaTitulos:{
     width:'100%',

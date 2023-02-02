@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
+import quemadura from '../img/HEALTH_burns.png'
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
@@ -42,6 +43,7 @@ const Quemaduras = ({navigation}) => {
                     <Text style={styles.letras1}>
                       {t("Quemaduras8")}
                     </Text>
+                    <Image source={quemadura} style={styles.imagen} /> 
                     <Text style={styles.letras1}>
                       {t("Quemaduras9")}
                     </Text>
@@ -195,6 +197,7 @@ const Quemaduras = ({navigation}) => {
                     <Text style={styles.letras1}>
                       {t("Quemaduras8")}
                     </Text>
+                    <Image source={quemadura} style={styles.imagen} /> 
                     <Text style={styles.letras1}>
                       {t("Quemaduras9")}
                     </Text>
@@ -311,6 +314,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
 
+  },
+  imagen:{
+    height:300,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode:'cover'
   },
   cajaTitulos:{
     width:'100%',

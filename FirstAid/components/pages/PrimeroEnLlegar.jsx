@@ -1,6 +1,9 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet , Image} from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
+import F1 from '../img/HEALTH_First_on_scene1.png'
+import F2 from '../img/HEALTH_First_on_scene2.png'
+import F3 from '../img/HEALTH_First_on_scene3.png'
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
@@ -44,7 +47,11 @@ const PrimeroEnLlegar = ({navigation}) => {
             {t("primeroenLlegar8")}
          </Text>
         </View>
+        <View style={styles.imagenesParalelo}>
+          <Image source={F1} style={styles.imagen2} /> 
+          <Image source={F2} style={styles.imagen2} /> 
         
+        </View>
         <Text style={styles.letras1}>
           {t("primeroenLlegar9")}
         </Text>
@@ -64,6 +71,15 @@ const styles = StyleSheet.create({
 
 
   },
+  imagen2:{
+    height:150,
+    width:'50%',
+  
+  },
+  imagenesParalelo:{
+    display:'flex',
+      flexDirection: 'row',
+    },
   cajaTitulos:{
     width:'100%',
     height:250,

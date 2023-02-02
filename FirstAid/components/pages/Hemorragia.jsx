@@ -1,6 +1,9 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
+import hemo0 from '../img/HEALTH_Severe0.png'
+import hemo1 from '../img/HEALTH_Severe1.png'
+import hemo2 from '../img/HEALTH_Severe2.png'
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
@@ -30,12 +33,16 @@ return (
         <Text style={styles.letras1}>
           {t("Hemorragia4")}
         </Text >
+        <Image source={hemo0} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Hemorragia5")}
         </Text>
         <Text style={styles.letras1}>
           {t("Hemorragia6")}
         </Text>
+        <Image source={hemo1} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Hemorragia7")}
         </Text>
@@ -48,6 +55,8 @@ return (
         <Text style={styles.letras1}>
           {t("Hemorragia10")}
         </Text>
+        <Image source={hemo2} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Hemorragia11")}
         </Text>
@@ -96,6 +105,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
 
+  },
+  imagen:{
+    height:250,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode: 'contain'  
   },
   cajaTitulos:{
     width:'100%',

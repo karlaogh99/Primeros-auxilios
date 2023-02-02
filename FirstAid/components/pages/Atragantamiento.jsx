@@ -1,8 +1,11 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity,Image, ScrollView, SafeAreaView } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
+import atragantamiento1 from '../img/HEALTH_Choking_1.png'
+import atragantamiento2 from '../img/HEALTH_Choking_2.png'
+
 
 import {useTranslation} from "react-i18next";
 import { Col, Grid, Row } from 'react-native-easy-grid';
@@ -55,9 +58,12 @@ const Atragantamiento = ({navigation}) => {
         <Text style={styles.letras1}>
           {t("Atragantamiento12")}
         </Text>
+        <Image source={atragantamiento1} style={styles.imagen} /> 
         <Text style={styles.letras1}>
           {t("Atragantamiento13")}
         </Text>
+        <Image source={atragantamiento2} style={styles.imagen2} /> 
+
         <Text style={styles.letras1}>
           {t("Atragantamiento14")} 
         </Text>
@@ -93,6 +99,20 @@ const styles = StyleSheet.create({
 
 
   },
+  imagen:{
+    height:250,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode: 'contain'  
+  },
+  imagen2:{
+    height:300,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode: 'contain'  
+  },
   cajaTitulos:{
     width:'100%',
     height:40,
@@ -122,10 +142,11 @@ const styles = StyleSheet.create({
   },
   central:{
     margin:15,
+    marginBottom:20,
     width:'90%',
     backgroundColor:'#FEFDEA',
     borderRadius: 10,
-
+    height:500
   },
   letras1:{
     color:'#1B2631' ,

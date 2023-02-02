@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Image } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
+import desmayo from '../img/HEALTH_Fainting.png'
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
@@ -50,6 +51,8 @@ const Desmayo = ({navigation}) => {
         <Text style={styles.letras1}>
           {t("Desmayo10")}
         </Text>
+        <Image source={desmayo} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Desmayo11")}
         </Text>
@@ -68,6 +71,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
 
+  },
+  imagen:{
+    height:180,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode:'cover',
   },
   cajaTitulos:{
     width:'100%',

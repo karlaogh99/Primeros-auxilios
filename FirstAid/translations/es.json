@@ -1,5 +1,6 @@
 {
     "sintomas":"SÍNTOMAS",
+    "atras":"Atrás" , 
     "quehacer" : "QUÉ HACER",
     "llamar":"Llama al 112",
     "sintamosyseñales" : "SIGNOS Y SÍNTOMAS",
@@ -272,7 +273,7 @@
     "Rcp11":"6. Pídele a otra persona que vaya a buscar el DEA. El operador de emergencias te podrá indicarte si hay un desfibrilador de acceso público cerca.",
     "Rcp12":"7. El desfibrilador te dará instrucciones auditivas de manera automática.",
 
-    "Ictus1":"Accidente cerebrovascular (ACV) o Ictus",
+    "Ictus1":"Accidente cerebrovascular",
     "Ictus2":"SEÑALES Y SÍNTOMAS:",
     "Ictus3":"● Dificultad para hablar y entender",
     "Ictus4":"● Parálisis o adormecimiento de la cara, brazo o pierna",

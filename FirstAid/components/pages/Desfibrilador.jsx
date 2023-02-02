@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Image } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
+import desfibrilador from '../img/HEALTH_def.png'
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
@@ -28,6 +29,7 @@ const Desfibrilador = ({navigation}) => {
         <Text style={styles.letras1}>
           {t("Desfibrilador5")}
         </Text >
+        <Image source={desfibrilador} style={styles.imagen} /> 
         <Text style={styles.letras1}>
           {t("Desfibrilador6")}
         </Text>
@@ -87,6 +89,13 @@ const styles = StyleSheet.create({
     color:'#1B2631' ,
     fontSize:24, 
     marginBottom:7
+  },
+  imagen:{
+    height:180,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode:'cover',
   },
   botones:{
 

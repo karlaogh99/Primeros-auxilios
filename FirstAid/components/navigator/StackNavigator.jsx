@@ -36,21 +36,21 @@ export const StackNavigator = () => {
       }}
     >
       <Stack.Screen name="Inicio" component={Inicio} />
-      <Stack.Screen name="PrimeroLlegar" options={{title:t("primeroenLlegar1")}} component={PrimeroEnLlegar} />
-      <Stack.Screen name = "Reaccionalergica" options={{title:t("reaccionalergica1")}} component={ReaccionAlergica}/>
-      <Stack.Screen name = "Asma" options={{title:t("Asma1")}} component={Asma}/>
-      <Stack.Screen name="Hemorragia" options={{title:t("Hemorragia1")}} component={Hemorragia} />
-      <Stack.Screen name="Quemaduras" options={{title:t("Quemaduras1")}} component={Quemaduras} />
-      <Stack.Screen name="Atragantamiento" options={{title:t("Atragantamiento1")}} component={Atragantamiento} />
-      <Stack.Screen name="Epilepsia" options={{title:t("Epilepsia1")}} component={Epilepsia} />
-      <Stack.Screen name="Desmayo" options={{title:t("Desmayo1")}} component={Desmayo} />
-      <Stack.Screen name="AtaqueCorazon" options={{title:t("AtaqueCorazon1")}} component={AtaqueCorazon} />
-      <Stack.Screen name="Shock" options={{title:t("Shock1")}} component={Shock} />
-      <Stack.Screen name="Llamada" options={{title:t("Llamada1")}} component={Llamada} />
-      <Stack.Screen name="Recuperacion" options={{title:t("Recuperacion1")}} component={Recuperacion} />
-      <Stack.Screen name="Desfibrilador" options={{title:t("Desfibrilador1")}} component={Desfibrilador} />
-      <Stack.Screen name="Rcp" options={{title:t("Rcp1")}} component={Rcp} />
-      <Stack.Screen name="Ictus" options={{title:t("Ictus1")}} component={Ictus} />
+      <Stack.Screen name="PrimeroLlegar" options={{title:t("primeroenLlegar1"), headerBackTitle:t("atras")}} component={PrimeroEnLlegar} />
+      <Stack.Screen name = "Reaccionalergica" options={{title:t("reaccionalergica1"), headerBackTitle:t("atras")}} component={ReaccionAlergica}/>
+      <Stack.Screen name = "Asma" options={{title:t("Asma1"), headerBackTitle:t("atras")}} component={Asma}/>
+      <Stack.Screen name="Hemorragia" options={{title:t("Hemorragia1"), headerBackTitle:t("atras")}} component={Hemorragia} />
+      <Stack.Screen name="Quemaduras" options={{title:t("Quemaduras1"), headerBackTitle:t("atras")}} component={Quemaduras} />
+      <Stack.Screen name="Atragantamiento" options={{title:t("Atragantamiento1"), headerBackTitle:t("atras")}} component={Atragantamiento} />
+      <Stack.Screen name="Epilepsia" options={{title:t("Epilepsia1"), headerBackTitle:t("atras")}} component={Epilepsia} />
+      <Stack.Screen name="Desmayo" options={{title:t("Desmayo1"), headerBackTitle:t("atras")}} component={Desmayo} />
+      <Stack.Screen name="AtaqueCorazon" options={{title:t("AtaqueCorazon1"), headerBackTitle:t("atras")}} component={AtaqueCorazon} />
+      <Stack.Screen name="Shock" options={{title:t("Shock1"), headerBackTitle:t("atras")}} component={Shock} />
+      <Stack.Screen name="Llamada" options={{title:t("Llamada1"), headerBackTitle:t("atras")}} component={Llamada} />
+      <Stack.Screen name="Recuperacion" options={{title:t("Recuperacion1"), headerBackTitle:t("atras"), headerBackTitle:t("atras")}} component={Recuperacion} />
+      <Stack.Screen name="Desfibrilador" options={{title:t("Desfibrilador1"), headerBackTitle:t("atras")}} component={Desfibrilador} />
+      <Stack.Screen name="Rcp" options={{title:t("Rcp1"), headerBackTitle:t("atras")}} component={Rcp} />
+      <Stack.Screen name="Ictus" options={{title:t("Ictus1"), headerBackTitle:t("atras")}} component={Ictus} />
 
 
     </Stack.Navigator>

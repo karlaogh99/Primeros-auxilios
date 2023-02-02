@@ -1,6 +1,6 @@
 import { View, Text, Image, Pressable , StyleSheet,Platform ,Button,Linking, TouchableOpacity}  from 'react-native';
 import React from 'react'
-import ulpgc from '../img/ulpgc3.png'
+import ulpgc from '../img/ulpgc.png'
 import espana from '../img/espana.png'
 import ingles from '../img/ingles.png'
 
@@ -50,29 +50,66 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
         <Grid>
             <Col style={styles.cajabotonesCol}>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Atragantamiento')}>
-                  <Text style={styles.letrasBoton}>{t("Atragantamiento1")} </Text>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
                 </TouchableOpacity>
                 
               </Row>
               <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Hemorragia')}>
+                  <Text style={styles.letrasBoton}>{t("Hemorragia1")} </Text>
+                </TouchableOpacity>                
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Rcp')}>
+                    <Text style={styles.letrasBoton}>{t("Rcp1")} </Text>
+                </TouchableOpacity>
+                
+                
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Epilepsia')}>
+                  <Text style={styles.letrasBoton}>{t("Epilepsia1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Recuperacion')}>
+                  <Text style={styles.letrasBotonPeque}>{t("Recuperacion1")} </Text>
+                </TouchableOpacity>
+              </Row>
+            </Col>
+            <Col style={styles.cajabotonesCol}>
+              <Row>
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Reaccionalergica')}>
                   <Text style={styles.letrasBoton}>{t("reaccionalergica1")} </Text>
                 </TouchableOpacity>
+
+                
               </Row>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desmayo')}>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Quemaduras')}>
+                  <Text style={styles.letrasBoton}>{t("Quemaduras1")} </Text>
+                </TouchableOpacity>
+                
+                
+              </Row>
+              <Row>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Atragantamiento')}>
+                  <Text style={styles.letrasBoton}>{t("Atragantamiento1")} </Text>
+                </TouchableOpacity>
+                
+
+              </Row>
+              <Row>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desmayo')}>
                   <Text style={styles.letrasBoton}>{t("Desmayo1")} </Text>
                 </TouchableOpacity>
+                
+                
               </Row>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Llamada')}>
-                  <Text style={styles.letrasBoton}>{t("Llamada1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Recuperacion')}>
-                  <Text style={styles.letrasBoton}>{t("Recuperacion1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Shock')}>
+                  <Text style={styles.letrasBoton}>{t("Shock1")} </Text>
                 </TouchableOpacity>
               </Row>
             </Col>
@@ -81,53 +118,33 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Asma')}>
                   <Text style={styles.letrasBoton}>{t("Asma1")} </Text>
                 </TouchableOpacity>
+                                
               </Row>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Hemorragia')}>
-                  <Text style={styles.letrasBoton}>{t("Hemorragia1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Llamada')}>
+                  <Text style={styles.letrasBoton}>{t("Llamada1")} </Text>
                 </TouchableOpacity>
+                
+                
+              </Row>
+              <Row>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desfibrilador')}>
+                  <Text style={styles.letrasBotonPeque}>{t("Desfibrilador1")} </Text>
+                </TouchableOpacity>
+                
+                
               </Row>
               <Row>
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('AtaqueCorazon')}>
                   <Text style={styles.letrasBoton}>{t("AtaqueCorazon1")} </Text>
                 </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desfibrilador')}>
-                  <Text style={styles.letrasBoton}>{t("Desfibrilador1")} </Text>
-                </TouchableOpacity>
-              </Row>
-            </Col>
-            <Col style={styles.cajabotonesCol}>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Quemaduras')}>
-                  <Text style={styles.letrasBoton}>{t("Quemaduras1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Epilepsia')}>
-                  <Text style={styles.letrasBoton}>{t("Epilepsia1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Shock')}>
-                  <Text style={styles.letrasBoton}>{t("Shock1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Rcp')}>
-                  <Text style={styles.letrasBoton}>{t("Rcp1")} </Text>
-                </TouchableOpacity>
+                
               </Row>
               <Row>
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Ictus')}>
                   <Text style={styles.letrasBoton}>{t("Ictus1")} </Text>
                 </TouchableOpacity>
+                
               </Row>
             </Col>
             
@@ -171,8 +188,62 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
         <Grid>
             <Col style={styles.cajabotonesCol}>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Atragantamiento')}>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
+                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
+                </TouchableOpacity>
+
+                
+                
+              </Row>
+              <Row>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Atragantamiento')}>
                   <Text style={styles.letrasBoton}>ATRAGANTA-MIENTO </Text>
+                </TouchableOpacity>
+
+                
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Epilepsia')}>
+                  <Text style={styles.letrasBoton}>{t("Epilepsia1")} </Text>
+                </TouchableOpacity>
+                
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Llamada')}>
+                  <Text style={styles.letrasBoton}>{t("Llamada1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Rcp')}>
+                    <Text style={styles.letrasBoton}>{t("Rcp1")} </Text>
+                </TouchableOpacity>
+                
+              </Row>
+            </Col>
+            <Col style={styles.cajabotonesCol}>
+              <Row>
+              
+
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Asma')}>
+                  <Text style={styles.letrasBoton}>{t("Asma1")} </Text>
+                </TouchableOpacity>
+              </Row>
+              <Row>
+              <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desfibrilador')}>
+                  <Text style={styles.letrasBotonPeque}>{t("Desfibrilador1")} </Text>
+                </TouchableOpacity>
+                
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Hemorragia')}>
+                  <Text style={styles.letrasBoton}>{t("Hemorragia1")} </Text>
+                </TouchableOpacity>
+
+                
+              </Row>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Recuperacion')}>
+                  <Text style={styles.letrasBotonPeque}>{t("Recuperacion1")} </Text>
                 </TouchableOpacity>
                 
               </Row>
@@ -181,73 +252,34 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
                   <Text style={styles.letrasBoton}>{t("reaccionalergica1")} </Text>
                 </TouchableOpacity>
               </Row>
+            </Col>
+            <Col style={styles.cajabotonesCol}>
+              <Row>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('AtaqueCorazon')}>
+                  <Text style={styles.letrasBoton}>{t("AtaqueCorazon1")} </Text>
+                </TouchableOpacity>
+
+                
+              </Row>
               <Row>
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desmayo')}>
                   <Text style={styles.letrasBoton}>{t("Desmayo1")} </Text>
                 </TouchableOpacity>
               </Row>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Llamada')}>
-                  <Text style={styles.letrasBoton}>{t("Llamada1")} </Text>
+                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Ictus')}>
+                  <Text style={styles.letrasBoton}>Ictus </Text>
                 </TouchableOpacity>
+                
               </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Recuperacion')}>
-                  <Text style={styles.letrasBotonPeque}>{t("Recuperacion1")} </Text>
-                </TouchableOpacity>
-              </Row>
-            </Col>
-            <Col style={styles.cajabotonesCol}>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Asma')}>
-                  <Text style={styles.letrasBoton}>{t("Asma1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Hemorragia')}>
-                  <Text style={styles.letrasBoton}>{t("Hemorragia1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('AtaqueCorazon')}>
-                  <Text style={styles.letrasBoton}>{t("AtaqueCorazon1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('PrimeroLlegar')}>
-                  <Text style={styles.letrasBoton}>{t("primeroenLlegar1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Desfibrilador')}>
-                  <Text style={styles.letrasBotonPeque}>{t("Desfibrilador1")} </Text>
-                </TouchableOpacity>
-              </Row>
-            </Col>
-            <Col style={styles.cajabotonesCol}>
               <Row>
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Quemaduras')}>
                   <Text style={styles.letrasBoton}>{t("Quemaduras1")} </Text>
                 </TouchableOpacity>
               </Row>
               <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Epilepsia')}>
-                  <Text style={styles.letrasBoton}>{t("Epilepsia1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Shock')}>
                   <Text style={styles.letrasBoton}>{t("Shock1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Rcp')}>
-                  <Text style={styles.letrasBoton}>{t("Rcp1")} </Text>
-                </TouchableOpacity>
-              </Row>
-              <Row>
-                <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Ictus')}>
-                  <Text style={styles.letrasBoton}>Ictus </Text>
                 </TouchableOpacity>
               </Row>
             </Col>

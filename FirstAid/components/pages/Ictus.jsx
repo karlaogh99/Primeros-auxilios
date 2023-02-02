@@ -1,6 +1,7 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, StyleSheet, ScrollView,Image } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
+import ictus from '../img/HEALTH_Stroke.png'
 
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
@@ -25,6 +26,8 @@ return (
           {t("Ictus2")} 
         </Text>
        </View>
+       <Image source={ictus} style={styles.imagen} /> 
+
         <Text style={styles.letras1}>
           {t("Ictus3")}
         </Text>
@@ -107,6 +110,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
 
+  },
+  imagen:{
+    height:200,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop:5
   },
   cajaTitulos:{
     width:'100%',
