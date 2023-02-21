@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.11.0",
+    "@react-icons/all-files": "^4.1.0",
+    "react-icons": "^4.7.1",
+    "react-native-vector-icons": "^9.2.0"
+  }
+}

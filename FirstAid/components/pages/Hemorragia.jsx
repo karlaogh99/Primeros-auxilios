@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Linking } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 import hemo0 from '../img/HEALTH_Severe0.png'
@@ -8,7 +8,9 @@ import hemo2 from '../img/HEALTH_Severe2.png'
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
 import {useTranslation} from "react-i18next";
-
+const llamar112 = async () => {
+  await Linking.openURL("tel:+34112");
+}
 const Hemorragia = ({navigation}) => {
   
     const {t, i18n} = useTranslation();
@@ -46,9 +48,8 @@ return (
         <Text style={styles.letras1}>
           {t("Hemorragia7")}
         </Text>
-        <Text style={styles.letras1}>
-          {t("Hemorragia8")}
-        </Text>
+        <TouchableOpacity onPress={llamar112} style={styles.botonEmer}><Text style={styles.letras0}>5. {t("llamar")}</Text></TouchableOpacity>
+      
         <Text style={styles.letras1}>
           {t("Hemorragia9")}
         </Text>
@@ -90,7 +91,8 @@ return (
           {t("Hemorragia20")}
         </Text>
         <Text style={styles.letras1}>
-          {t("Hemorragia21")}
+        <TouchableOpacity onPress={llamar112} style={styles.botonEmer}><Text style={styles.letras0}>6. {t("llamar")}</Text></TouchableOpacity>
+
         </Text>
         
       </ScrollView>
@@ -152,8 +154,34 @@ const styles = StyleSheet.create({
     fontSize:24, 
     marginBottom:7
   },
+   
+   letras0:{
+    color:'#1B2631' ,
+    fontSize:25, 
+    resizeMode: 'contain'  
+  },
   botones:{
-
+    backgroundColor:'#AED6F1' ,
+     height:20, width:220,
+     marginBottom:7, 
+     alignItems:'center', 
+     justifyContent:'center'
+  },
+  botonEmer:{
+    backgroundColor:'#F1948A' ,
+    height:50,
+     width:350,
+    margin:7, 
+    alignItems:'center', 
+    justifyContent:'center',
+     shadowOffset: {
+      width: 0,
+      height: 4,
+      
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
   }
 
 

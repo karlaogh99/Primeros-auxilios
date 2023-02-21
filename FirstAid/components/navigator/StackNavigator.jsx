@@ -35,7 +35,7 @@ export const StackNavigator = () => {
         }
       }}
     >
-      <Stack.Screen name="Inicio" component={Inicio} />
+      <Stack.Screen name="Inicio" options={{title:t("ini")}} component={Inicio} />
       <Stack.Screen name="PrimeroLlegar" options={{title:t("primeroenLlegar1"), headerBackTitle:t("atras")}} component={PrimeroEnLlegar} />
       <Stack.Screen name = "Reaccionalergica" options={{title:t("reaccionalergica1"), headerBackTitle:t("atras")}} component={ReaccionAlergica}/>
       <Stack.Screen name = "Asma" options={{title:t("Asma1"), headerBackTitle:t("atras")}} component={Asma}/>

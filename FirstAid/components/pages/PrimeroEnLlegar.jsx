@@ -1,28 +1,20 @@
-import { View, Text, StyleSheet , Image} from 'react-native'
+import { View, Text, StyleSheet , Image, TouchableOpacity, ScrollView} from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 import F1 from '../img/HEALTH_First_on_scene1.png'
 import F2 from '../img/HEALTH_First_on_scene2.png'
 import F3 from '../img/HEALTH_First_on_scene3.png'
-
 import { Link, Navigate,useNavigate } from 'react-router-native';
-
 import {useTranslation} from "react-i18next";
-
-
-
 const PrimeroEnLlegar = ({navigation}) => {
-  
 
-    //const navigate = useNavigate();
-    const press = ()=>{
-        navigate("/")
-    }
     const {t, i18n} = useTranslation();
 //#ffa103 color naranja
     
   return (
     <View style={styles.principal}>
+      <ScrollView>
+      
       <View style={styles.central}>
         <Text style={styles.letras1}>
           {t("primeroenLlegar2")} 
@@ -31,35 +23,94 @@ const PrimeroEnLlegar = ({navigation}) => {
           <Text style={styles.letras1}>
             {t("primeroenLlegar3")}
           </Text>
+        </View>
+        <Text style={styles.letras1}>
+            {t("primeroenLlegar31")}
+        </Text>
+        <Text style={styles.letras1}>
+            {t("primeroenLlegar32")}
+        </Text>
+        <Text style={styles.letras1}>
+            {t("primeroenLlegar33")}
+        </Text>
+        <View style={styles.cajaTitulos}>
           <Text style={styles.letras1}>
             {t("primeroenLlegar4")}
-          </Text >
+          </Text>
+        </View>
+        <Text style={styles.letras1}>
+            {t("primeroenLlegar41")}
+        </Text>
+        <Text style={styles.letras1}>
+            {t("primeroenLlegar42")}
+        </Text>
+        <Text style={styles.letras1}>
+            {t("primeroenLlegar43")}
+        </Text>
+        <View style={styles.cajaTitulos}>
           <Text style={styles.letras1}>
             {t("primeroenLlegar5")}
           </Text>
+        </View>
+        <View style={{height:10}}></View>
+        <View style={styles.cajaTitulos}>
           <Text style={styles.letras1}>
             {t("primeroenLlegar6")}
           </Text>
+        </View>
+        <Text style={styles.letras1}>
+            {t("primeroenLlegar61")}
+        </Text >
+        <Text style={styles.letras1}>
+            {t("primeroenLlegar62")}
+        </Text >
+        <Text style={styles.letras1}>
+            {t("primeroenLlegar63")}
+        </Text >
+          <Text style={styles.letras1}>
+            {t("primeroenLlegar64")}
+          </Text>
+          <Text style={styles.letras1}>
+            {t("primeroenLlegar65")}
+          </Text>
+          <Text style={styles.letras1}>
+            {t("primeroenLlegar66")}
+          </Text>
+          <View style={styles.cajaTitulos}>
           <Text style={styles.letras1}>
             {t("primeroenLlegar7")}
           </Text>
+        </View>
+          <Text style={styles.letras1}>
+            {t("primeroenLlegar71")}
+          </Text>
+          <Text style={styles.letras1}>
+            {t("primeroenLlegar72")}
+          </Text>
+          <Text style={styles.letras1}>
+            {t("primeroenLlegar73")} <TouchableOpacity onPress={()=>navigation.navigate('Rcp')} style={styles.botones}><Text style={styles.letras0}>{t("Rcp1")} </Text></TouchableOpacity>
+
+          </Text>
+          <Text style={styles.letras1}>
+            {t("primeroenLlegar74")} <TouchableOpacity onPress={()=>navigation.navigate('Recuperacion')} style={styles.botones}><Text style={styles.letras0}>{t("Recuperacion1")} </Text></TouchableOpacity>
+          </Text>
+          <View style={styles.cajaTitulos}>
           <Text style={styles.letras1}>
             {t("primeroenLlegar8")}
-         </Text>
+          </Text>
         </View>
+          <Text style={styles.letras1}>
+            {t("primeroenLlegar81")}
+         </Text>
+        
         <View style={styles.imagenesParalelo}>
           <Image source={F1} style={styles.imagen2} /> 
           <Image source={F2} style={styles.imagen2} /> 
         
         </View>
-        <Text style={styles.letras1}>
-          {t("primeroenLlegar9")}
-        </Text>
-        <Text style={styles.letras1}>
-          {t("primeroenLlegar10")}
-        </Text>
+       
       </View>
-      
+      </ScrollView>
     </View>
   )
 }
@@ -82,7 +133,7 @@ const styles = StyleSheet.create({
     },
   cajaTitulos:{
     width:'100%',
-    height:250,
+    height:50,
     alignItems: 'center',
     justifyContent: 'center',
     
@@ -118,6 +169,43 @@ const styles = StyleSheet.create({
     color:'#1B2631' ,
     fontSize:24, 
     marginBottom:7
+  },
+  botonPeque:{
+    backgroundColor:'#AED6F1' ,
+    height:20, width:100,
+    marginBottom:7, 
+    alignItems:'center', 
+    justifyContent:'center',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+      
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
+    
+  },  
+   letras0:{
+    color:'#1B2631' ,
+    fontSize:22, 
+    resizeMode: 'contain'  
+
+  },
+  botones:{
+    backgroundColor:'#ffa103' ,
+     height:50, width:350,
+     margin:7, 
+     alignItems:'center', 
+     justifyContent:'center',shadowOffset: {
+      width: 0,
+      height: 4,
+      
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
+ 
   },
 
 

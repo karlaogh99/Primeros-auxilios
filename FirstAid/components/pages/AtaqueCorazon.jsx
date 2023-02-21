@@ -66,8 +66,9 @@ const AtaqueCorazon = ({navigation}) => {
           {t("AtaqueCorazon15")}
         </Text> 
         <Text style={styles.letras1}>
-          {t("AtaqueCorazon16")}
+          {t("AtaqueCorazon16")} 
         </Text> 
+        <TouchableOpacity onPress={()=>navigation.navigate('Rcp')} style={styles.botones}><Text style={styles.letras0}>{t("Rcp1")} </Text></TouchableOpacity>
         <Text style={styles.letras1}>
           {t("AtaqueCorazon17")}
         </Text> 
@@ -77,6 +78,7 @@ const AtaqueCorazon = ({navigation}) => {
         <Text style={styles.letras1}>
           {t("AtaqueCorazon19")}
         </Text> 
+        <TouchableOpacity onPress={()=>navigation.navigate('Desfibrilador')} style={styles.botones}><Text style={styles.letras0}>{t("AtaqueCorazon191")} </Text></TouchableOpacity>
       </ScrollView>
     </View>
   )
@@ -136,9 +138,52 @@ const styles = StyleSheet.create({
     fontSize:24, 
     marginBottom:7
   },
-  botones:{
+  botonPeque:{
+    backgroundColor:'#AED6F1' ,
+    height:20, width:300,
+    margin:7, 
+    alignItems:'center', 
+    justifyContent:'center',
 
+    backgroundColor:'#AED6F1' ,
+    height:20, 
+    width:150,
+    margin:7, 
+    alignItems:'center', 
+    justifyContent:'center'
+  },  
+   letras0:{
+    color:'#1B2631' ,
+    fontSize:22, 
+    resizeMode: 'contain'  
+
+  },
+  botones:{
+    backgroundColor:'#AED6F1' ,
+     height:80, 
+     width:380,
+     margin:7, 
+     alignItems:'center', 
+     justifyContent:'center',shadowOffset: {
+      width: 0,
+      height: 4,
+      
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
+ 
+     
+  },
+  botonEmer:{
+    backgroundColor:'#F1948A' ,
+     height:20,
+      width:190,
+     marginBottom:7, 
+     alignItems:'center', 
+     justifyContent:'center'
   }
+
 
 
 })

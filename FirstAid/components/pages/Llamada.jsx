@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 
@@ -9,7 +9,9 @@ import {useTranslation} from "react-i18next";
 
 
 const Llamada = ({navigation}) => {
-  
+  const llamar112 = async () => {
+    await Linking.openURL("tel:+34112");
+  }
     const {t, i18n} = useTranslation();
 //#ffa103 color naranja
     
@@ -39,10 +41,8 @@ const Llamada = ({navigation}) => {
             {t("Llamada8")}
          </Text>
         </View>
+        <TouchableOpacity onPress={llamar112} style={styles.botonEmer}><Text style={styles.letras0}>{t("llamar")}</Text></TouchableOpacity>
         
-        <Text style={styles.letras1}>
-          {t("llamar")}
-        </Text>
       </View>
       
     </View>
@@ -55,6 +55,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
 
 
+  },
+  letras0:{
+    color:'#1B2631' ,
+    fontSize:25, 
+    resizeMode: 'contain'  
+
+  },
+  botonEmer:{
+    backgroundColor:'#F1948A' ,
+    height:50, width:350,
+    margin:7, 
+    alignItems:'center', 
+    justifyContent:'center',
+     shadowOffset: {
+      width: 0,
+      height: 4,
+      
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
   },
   cajaTitulos:{
     width:'100%',

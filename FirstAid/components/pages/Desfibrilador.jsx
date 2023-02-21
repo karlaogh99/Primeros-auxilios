@@ -37,7 +37,10 @@ const Desfibrilador = ({navigation}) => {
           {t("Desfibrilador7")}
         </Text>
         <Text style={styles.letras1}>
-          {t("Desfibrilador8")}
+          {t("Desfibrilador8")} <TouchableOpacity onPress={()=>navigation.navigate('Rcp')} style={styles.botones}><Text style={styles.letras0}>{t("Rcp1")} </Text></TouchableOpacity>
+        </Text>
+        <Text style={styles.letras1}>
+          {t("Desfibrilador81")}
         </Text>
       </ScrollView>
     </View>
@@ -51,6 +54,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
 
+  },
+  letras0:{
+    color:'#1B2631' ,
+    fontSize:22, 
+    resizeMode: 'contain'  
+
+  },
+  botones:{
+    backgroundColor:'#ffa103' ,
+     height:50, width:350,
+     margin:7, 
+     alignItems:'center', 
+     justifyContent:'center',shadowOffset: {
+      width: 0,
+      height: 4,
+      
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
+ 
   },
   cajaTitulos:{
     width:'100%',
@@ -97,9 +121,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     resizeMode:'cover',
   },
-  botones:{
-
-  }
 
 
 })

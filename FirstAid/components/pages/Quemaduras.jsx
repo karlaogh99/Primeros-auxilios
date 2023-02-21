@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Linking } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 import quemadura from '../img/HEALTH_burns.png'
@@ -6,7 +6,9 @@ import quemadura from '../img/HEALTH_burns.png'
 import { Link, Navigate,useNavigate } from 'react-router-native';
 
 import {useTranslation} from "react-i18next";
-
+const llamar112 = async () => {
+  await Linking.openURL("tel:+34112");
+}
 const Quemaduras = ({navigation}) => {
   
     const {t, i18n} = useTranslation();
@@ -84,9 +86,7 @@ const Quemaduras = ({navigation}) => {
                     <Text style={styles.letras1}>
                       {t("Quemaduras19")}
                     </Text>
-                    <Text style={styles.letras1}>
-                      {t("Quemaduras20")}
-                    </Text>
+                    
                     <Text style={styles.letras1}>
                       {t("Quemaduras21")}
                     </Text>
@@ -96,10 +96,8 @@ const Quemaduras = ({navigation}) => {
                     <Text style={styles.letras1}>
                       {t("Quemaduras23")}
                     </Text>
-                    <Text style={styles.letras1}>
-                      {t("Quemaduras24")}
-                    </Text>
-            
+                    <TouchableOpacity onPress={llamar112} style={styles.botonEmer}><Text style={styles.letras0}>6. {t("llamar")}</Text></TouchableOpacity>
+
                     <View style={styles.cajaSecundarios}>
                       <Text style={styles.letrasTitulos}>{t("Quemaduras25")}</Text>
                     </View>
@@ -157,9 +155,8 @@ const Quemaduras = ({navigation}) => {
                     <Text style={styles.letras1}>
                       {t("Quemaduras43")}
                     </Text>
-                    <Text style={styles.letras1}>
-                      {t("Quemaduras44")}
-                    </Text>
+                    
+                    <TouchableOpacity onPress={llamar112} style={styles.botonEmer}><Text style={styles.letras0}>7. {t("llamar")}</Text></TouchableOpacity>
                     
                     
                   </ScrollView>
@@ -236,10 +233,9 @@ const Quemaduras = ({navigation}) => {
                     6. Busca indicios de shock.
                     </Text>
                     <Text style={styles.letras1}>
-                       - Los síntomas incluyen frío, piel húmeda y pegajosa, bajo pulso y respiración superficial.                    </Text>
-                    <Text style={styles.letras1}>
-                    7. Llama al 112
+                       - Los síntomas incluyen frío, piel húmeda y pegajosa, bajo pulso y respiración superficial.                    
                     </Text>
+                    <TouchableOpacity onPress={llamar112} style={styles.botonEmer}><Text style={styles.letras0}>7. {t("llamar")}</Text></TouchableOpacity>
                     <View style={styles.cajaSecundarios}>
                       <Text style={styles.letrasTitulos}>{t("Quemaduras25")}</Text>
                     </View>
@@ -294,10 +290,8 @@ const Quemaduras = ({navigation}) => {
                     <Text style={styles.letras1}>
                       {t("Quemaduras42")}
                     </Text>
-                    <Text style={styles.letras1}>
-                      {t("Quemaduras43")}
-                    </Text>
-                    
+                    <TouchableOpacity onPress={llamar112} style={styles.botonEmer}><Text style={styles.letras0}>6. {t("llamar")}</Text></TouchableOpacity>
+  
                     
                   </ScrollView>
                 </View>
@@ -314,6 +308,28 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
 
+  },
+  letras0:{
+    color:'#1B2631' ,
+    fontSize:25, 
+    resizeMode: 'contain'  
+
+  },
+  botonEmer:{
+    backgroundColor:'#F1948A' ,
+    height:50,
+     width:350,
+    margin:7, 
+    alignItems:'center', 
+    justifyContent:'center',
+     shadowOffset: {
+      width: 0,
+      height: 4,
+      
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
   },
   imagen:{
     height:300,
@@ -363,8 +379,16 @@ const styles = StyleSheet.create({
   },
   botones:{
 
-  }
-
+  },
+  
+  botones:{
+    backgroundColor:'#AED6F1' ,
+     height:20, width:220,
+     marginBottom:7, 
+     alignItems:'center', 
+     justifyContent:'center'
+  },
+ 
 
 })
 

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Image } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Image, Linking } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 import asma from '../img/HEALTH_Asthma.png'
@@ -8,8 +8,9 @@ import { Link, Navigate,useNavigate } from 'react-router-native';
 import {useTranslation} from "react-i18next";
 import { Col, Grid, Row } from 'react-native-easy-grid';
 const Asma = ({navigation}) => {
-    const [textToRender, setTextToRender] = useState("")
-
+    const llamar112 = async () => {
+      await Linking.openURL("tel:+34112");
+    }
     const {t, i18n} = useTranslation();
     
   return (
@@ -73,13 +74,13 @@ const Asma = ({navigation}) => {
           {t("Asma17")}
         </Text> 
         <Text style={styles.letras1}>
-          {t("Asma18")}
+          {t("Asma18")}<TouchableOpacity onPress={llamar112} style={styles.botonEmer}><Text style={styles.letras0}>{t("Asma181")}</Text></TouchableOpacity>
         </Text>
         <Text style={styles.letras1}>
           {t("Asma19")}
         </Text>
         <Text style={styles.letras1}>
-          {t("Asma20")}
+          {t("Asma20")} <TouchableOpacity onPress={()=>navigation.navigate('Rcp')} style={styles.botones}><Text style={styles.letras0}>{t("Rcp1")} </Text></TouchableOpacity>
         </Text>
         
       </ScrollView>
@@ -140,8 +141,50 @@ const styles = StyleSheet.create({
   },
   botones:{
 
-  }
+  },
+  letras0:{
+    color:'#1B2631' ,
+    fontSize:20, 
+    resizeMode: 'contain'  
 
+  },
+  /*botones:{
+    backgroundColor:'#AED6F1' ,
+     height:20, width:110,
+     marginBottom:7, 
+     alignItems:'center', 
+     justifyContent:'center'
+  },*/
+  botones:{
+    backgroundColor:'#AED6F1' ,
+     height:50, width:350,
+     margin:7, 
+     alignItems:'center', 
+     justifyContent:'center',shadowOffset: {
+      width: 0,
+      height: 4,
+      
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
+ 
+  },
+  botonEmer:{
+    backgroundColor:'#F1948A' ,
+    height:50, width:350,
+    margin:7, 
+    alignItems:'center', 
+    justifyContent:'center',
+     shadowOffset: {
+      width: 0,
+      height: 4,
+      
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
+  }
 
 })
 

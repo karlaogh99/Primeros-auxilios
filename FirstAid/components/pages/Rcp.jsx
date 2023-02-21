@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, ScrollView , Image} from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 import RCP2 from '../img/HEALTH_CPR_2.png'
-import RCP3 from '../img/HEALTH_CPR_3.png'
+import RCP9 from '../img/HEALTH_CPR3.png'
 import RCP4 from '../img/HEALTH_CPR_4.png'
 import RCP5 from '../img/HEALTH_CPR_5.png'
 import RCP6 from '../img/HEALTH_CPR_6.png'
@@ -32,27 +32,34 @@ return (
         <Text style={styles.letras1}>
           {t("Rcp5")}
         </Text>
-        <Image source={RCP3} style={styles.imagen} /> 
-
+        <View>
+          <Image source={RCP9} style={styles.imagen} /> 
+        </View>
+        
         <Text style={styles.letras1}>
           {t("Rcp6")}
         </Text>
         <Text style={styles.letras1}>
           {t("Rcp7")}
         </Text>
-        <Image source={RCP6} style={styles.imagen} /> 
+        <View>
+          <Image source={RCP6} style={styles.imagen} /> 
+        </View>
         <Text style={styles.letras1}>
           {t("Rcp8")}
         </Text>
         <Text style={styles.letras1}>
           {t("Rcp9")}
-        </Text>
-        <View style={styles.imagenesParalelo}>
-          <Image source={RCP5} style={styles.imagen2} /> 
-          <Image source={RCP4} style={styles.imagen2} /> 
-        </View>
-        
-
+        </Text>  
+        <View>
+          <Image source={RCP5} style={styles.imagen} />
+        </View>        
+        <Text style={styles.letras1}>
+          {t("Rcp91")}
+        </Text>   
+        <View>
+          <Image source={RCP4} style={styles.imagen} /> 
+        </View>   
         <Text style={styles.letras1}>
           {t("Rcp10")}
         </Text>
@@ -77,22 +84,21 @@ const styles = StyleSheet.create({
 
   },
   imagen:{
-    height:180,
+    height:200,
     width:'100%',
     alignItems: 'center',
     justifyContent: 'center',
     resizeMode:'cover',
   },
   imagen2:{
-    height:200,
+    height:140,
     width:'50%',
     alignItems: 'center',
     justifyContent: 'center',
-    resizeMode:'cover',
   },
   imagenesParalelo:{
     display:'flex',
-      flexDirection: 'row',
+    flexDirection: 'row',
     },
   cajaTitulos:{
     width:'100%',
@@ -133,10 +139,6 @@ const styles = StyleSheet.create({
     fontSize:24, 
     marginBottom:7
   },
-  botones:{
-
-  }
-
 
 })
 

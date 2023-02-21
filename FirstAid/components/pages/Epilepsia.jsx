@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Linking } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import {Button} from 'react-native';
 
@@ -7,8 +7,9 @@ import { Link, Navigate,useNavigate } from 'react-router-native';
 import {useTranslation} from "react-i18next";
 import { Col, Grid, Row } from 'react-native-easy-grid';
 const Epilepsia = ({navigation}) => {
-    const [textToRender, setTextToRender] = useState("")
-
+    const llamar112 = async () => {
+      await Linking.openURL("tel:+34112");
+    }
     const {t, i18n} = useTranslation();
     
   return (
@@ -95,9 +96,6 @@ const Epilepsia = ({navigation}) => {
           {t("Epilepsia25")}
         </Text>
         <Text style={styles.letras1}>
-          {t("Epilepsia26")}
-        </Text>
-        <Text style={styles.letras1}>
           {t("Epilepsia27")}
         </Text>
         <Text style={styles.letras1}>
@@ -141,6 +139,9 @@ const Epilepsia = ({navigation}) => {
         <Text style={styles.letras1}>
           {t("Epilepsia40")}
         </Text>
+        <Text style={styles.letras1}>
+          <TouchableOpacity onPress={llamar112} style={styles.botonEmer}><Text style={styles.letras0}>{t("Asma181")}</Text></TouchableOpacity>
+        </Text>
       </ScrollView>
     </View>
   )
@@ -180,6 +181,26 @@ const styles = StyleSheet.create({
     fontSize:30,
     color:'#1B2631' ,
 
+  },
+  letras0:{
+    color:'#1B2631' ,
+    fontSize:20, 
+    resizeMode: 'contain'  
+
+  },
+  botonEmer:{
+    backgroundColor:'#F1948A' ,
+    height:50, width:350,
+    margin:7, 
+    alignItems:'center', 
+    justifyContent:'center',
+     shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+    elevation: 9,
   },
   central:{
     margin:15,

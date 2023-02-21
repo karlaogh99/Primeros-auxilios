@@ -3,6 +3,7 @@ import React from 'react'
 import ulpgc from '../img/ulpgc.png'
 import espana from '../img/espana.png'
 import ingles from '../img/ingles.png'
+import llamada from '../img/llamada.png'
 
 import {useTranslation} from "react-i18next";
 import { Link, Navigate,useNavigate } from 'react-router-native';
@@ -22,6 +23,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
         <View>
         <View style={styles.idiomas} >
           <View style={styles.cajabotonesIdioma}>
+
             <TouchableOpacity onPress={()=>i18n.changeLanguage("es")}>
               <Image source={espana} style={styles.icono} />      
             </TouchableOpacity>
@@ -32,6 +34,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
           
         </View>
         <View style={styles.mystyleIni}>
+
           <Image style={{width:150, height:150}} source={ulpgc} alt=""/>
           <Text style={styles.stylesInicio}>{t("Inicio")}
           </Text>
@@ -41,7 +44,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
         <View style={styles.cuerpoColor}>
           <View style={styles.espaciado} >
               <TouchableOpacity style={styles.botonLlamada} onPress={llamar112}>
-                  <Text style={styles.letrasLlamada}>{t("Llamar")}</Text>     
+                  <Text style={styles.letrasLlamada}>  <Image source={llamada} style={styles.icono2} />  {t("Llamar")}</Text>     
                 </TouchableOpacity>
   
           </View>
@@ -179,8 +182,8 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
         <View style={styles.cuerpoColor}>
           <View style={styles.espaciado} >
               <TouchableOpacity style={styles.botonLlamada} onPress={llamar112}>
-                  <Text style={styles.letrasLlamada}>{t("Llamar")}</Text>     
-                </TouchableOpacity>
+                  <Text style={styles.letrasLlamadaes}><Image source={llamada} style={styles.icono2} />  {t("Llamar")}</Text>     
+                </TouchableOpacity> 
   
           </View>
           
@@ -315,7 +318,6 @@ const styles = StyleSheet.create({
    espaciado:{
     margin: 10,
     alignItems: 'center',
-
     justifyContent: 'center',
 
   },
@@ -323,8 +325,8 @@ const styles = StyleSheet.create({
     elevation: 8,
       backgroundColor: "red",
       borderRadius: 10,
-      paddingVertical: 10,
-      paddingHorizontal: 120,
+      paddingVertical: 15,
+      paddingHorizontal: 90,
       marginBottom:1
   },
   botonsolo:{
@@ -335,6 +337,7 @@ const styles = StyleSheet.create({
   },
   bottonsolo:{
       height: 60,
+      
       width: 170,
       backgroundColor: "#ffa002",
       borderRadius: 10,
@@ -349,18 +352,25 @@ const styles = StyleSheet.create({
       alignItems: 'center',
   },
   letrasLlamada:{
-    fontSize: 20,
+    fontSize: 29,
     color: "#fff",
     fontWeight: "bold",
     alignSelf: "center",
     textTransform: "uppercase"
   },
+  letrasLlamadaes:{
+    fontSize: 25,
+    color: "#fff",
+    fontWeight: "bold",
+    textTransform: "uppercase"},
   letrasBotonPeque:{
-    fontSize: 14,
+    fontSize:  14,
     color: "#fff",
     fontWeight: "bold",
     alignSelf: "center",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    textShadowColor:'black',
+    textShadowRadius:12
   },
    
     idiomas:{
@@ -368,20 +378,26 @@ const styles = StyleSheet.create({
       display:'flex',
     },
     cuerpoColor:{
-      backgroundColor: "#bfbebf",
+      backgroundColor: "#32659f",
+
+      //backgroundColor: "#bfbebf",
       height:600
     },
     letrasBoton:{
-      fontSize: 15,
+      fontSize:Platform.OS==='ios' ? 15 : 17,
       color: "#fff",
       fontWeight: "bold",
       alignSelf: "center",
-      textTransform: "uppercase"
-    },
+      textTransform: "uppercase",
+      textShadowColor:'black',
+      textShadowRadius:12,
+      
+      
+    },//FFCC2B
     botton:{
       height: 70,
       width: 125, 
-      backgroundColor: "#FFCC2B",
+      backgroundColor: "#ffa103",
       borderRadius: 10,
       paddingVertical: 5,
       paddingHorizontal: 3,
@@ -419,6 +435,16 @@ const styles = StyleSheet.create({
       height: 40,
       width: 40,
       marginLeft:5,
+      resizeMode: 'stretch',
+      display:'flex',
+      right:0,
+      marginTop:Platform.OS==='ios' ? 1 : 1 ,
+
+    },
+    icono2:{
+      height: 25,
+      width: 25,
+      
       resizeMode: 'stretch',
       display:'flex',
       right:0,
