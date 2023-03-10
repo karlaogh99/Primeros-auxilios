@@ -20,7 +20,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
   if(i18n.language == "en"){
     return (
       <View>
-        <View>
+        <View style={styles.fir}>
         <View style={styles.idiomas} >
           <View style={styles.cajabotonesIdioma}>
 
@@ -35,7 +35,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
         </View>
         <View style={styles.mystyleIni}>
 
-          <Image style={{width:150, height:150}} source={ulpgc} alt=""/>
+          <Image style={styles.imagenIni} source={ulpgc} alt=""/>
           <Text style={styles.stylesInicio}>{t("Inicio")}
           </Text>
         </View>
@@ -160,7 +160,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
   }else{
     return (
       <View>
-        <View>
+        <View style={styles.fir}>
         <View style={styles.idiomas} >
           <View style={styles.cajabotonesIdioma}>
             <TouchableOpacity onPress={()=>i18n.changeLanguage("es")}>
@@ -173,7 +173,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
           
         </View>
         <View style={styles.mystyleIni}>
-          <Image style={{width:150, height:150}} source={ulpgc} alt=""/>
+          <Image style={styles.imagenIni} source={ulpgc} alt=""/>
           <Text style={styles.stylesInicio}>{t("Inicio")}
           </Text>
         </View>
@@ -213,7 +213,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
               </Row>
               <Row>
                 <TouchableOpacity style={styles.botton} onPress={()=>navigation.navigate('Llamada')}>
-                  <Text style={styles.letrasBoton}>{t("Llamada1")} </Text>
+                  <Text style={styles.letrasBotonEmer}>{t("Llamada1")} </Text>
                 </TouchableOpacity>
               </Row>
               <Row>
@@ -297,9 +297,19 @@ import { Col, Grid, Row } from 'react-native-easy-grid';
   
 }
 const styles = StyleSheet.create({
+  firstMid:{
+    maxHeight:'30%',
+    overflow: 'hidden'
+
+  },
+  imagenIni:{
+    width:'60%', 
+    height:'90%',
+    resizeMode:'contain'
+  },
    mystyleIni: {
     width: '100%',
-    height: Platform.OS==='ios' ? 175 : 175,
+    height: Platform.OS==='ios' ? 175 : 160,
     backgroundColor: "#32659f",
     fontFamily: "Rubik",
     justifyContent: 'center',
@@ -319,7 +329,7 @@ const styles = StyleSheet.create({
     margin: 10,
     alignItems: 'center',
     justifyContent: 'center',
-
+    height:'16%'
   },
   botonLlamada:{
     elevation: 8,
@@ -381,7 +391,18 @@ const styles = StyleSheet.create({
       backgroundColor: "#32659f",
 
       //backgroundColor: "#bfbebf",
-      height:600
+      height:'auto'
+    },
+    letrasBotonEmer:{
+      fontSize:Platform.OS==='ios' ? 13 : 12,
+      color: "#fff",
+      fontWeight: "bold",
+      alignSelf: "center",
+      textTransform: "uppercase",
+      textShadowColor:'black',
+      textShadowRadius:12,
+      
+      
     },
     letrasBoton:{
       fontSize:Platform.OS==='ios' ? 15 : 17,
@@ -395,7 +416,7 @@ const styles = StyleSheet.create({
       
     },//FFCC2B
     botton:{
-      height: 70,
+      height: '90%',
       width: 125, 
       backgroundColor: "#ffa103",
       borderRadius: 10,
@@ -415,7 +436,7 @@ const styles = StyleSheet.create({
     },
     cajabotonesMenu:{
       alignItems: 'center',
-      height:380,
+      height:'58%',
       justifyContent: 'center',
     },
     cajabotonesCol:{
